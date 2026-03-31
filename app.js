@@ -2,7 +2,7 @@ let boxes=document.querySelectorAll(".box");
 let reset=document.querySelector("#reset");
 
 let turnO=true;
-let count = 0; // ✅ ADDED
+let count = 0;
 
 let winPatterns=[[0,1,2],[0,3,6],[0,4,8],[1,4,7],[2,5,8],[2,4,6],[3,4,5],[6,7,8]];
 
@@ -19,11 +19,11 @@ boxes.forEach((box)=>{
     }
 
     box.disabled=true;
-    count++; // ✅ ADDED
+    count++; 
 
     checkWinner();
 
-    if(count === 9){ // ✅ ADDED
+    if(count === 9){ 
       alert("It's a draw!");
     }
 
@@ -48,5 +48,5 @@ reset.addEventListener("click",() => {
     box.disabled=false;
   }
   turnO = true;
-  count = 0; // ✅ ADDED
+  count = 0; 
 });
